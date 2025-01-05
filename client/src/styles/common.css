@@ -1,0 +1,614 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Montserrat", "Roboto", sans-serif;
+  color: #ffffff;
+}
+
+body {
+  font-size: 16px;
+}
+
+html,
+body {
+  font-family: "Roboto", sans-serif;
+  padding: 0;
+  margin: 0;
+  overflow: hidden;
+}
+
+#root {
+  height: 100vh;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+*::-webkit-scrollbar {
+  width: 0.5em;
+}
+*::-webkit-scrollbar-thumb {
+  background-color: #888;
+  border-radius: 50px;
+}
+.swal2-container {
+  z-index: 2000;
+}
+
+a {
+  text-decoration: none;
+}
+
+ul {
+  list-style: none;
+}
+
+
+
+/* Authentication */
+
+.authOuterContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  height: 100vh;
+  align-items: center;
+  background-color: #212121;
+}
+
+.authInnerContainer {
+  height: fit-content;
+  width: fit-content;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+  border-radius: 4px;
+}
+
+.authHeading {
+  color: #18191a;
+  font-size: 3em;
+  font-weight: normal;
+}
+div[class^="makeStyles-root-"] {
+  width: 30vw !important;
+  height: 60vh !important;
+  background-color: #424242;
+}
+
+div[class^="makeStyles-paper-"] {
+  margin-top: 10%;
+  justify-content: center;
+}
+
+div[class^="MuiBox-root MuiBox-root-"] {
+  padding: 6px;
+}
+
+button[class^="MuiButtonBase-root MuiButton-root MuiButton-contained makeStyles-submit-"] {
+  padding: 10px !important;
+  background-color: #2f2f2f;
+
+}
+
+.MuiButton-label {
+  color: white;
+  background-color: #2f2f2f;
+  border: transparent;
+  margin: -10px;
+  height: 50px;
+  width: 100%;
+  border-radius: 10px;
+  transition: .1s ease-in-out;
+}
+.MuiButton-label:hover {
+  background-color: #252525;
+}
+button[class^="MuiButtonBase-root MuiButton-root MuiButton-contained makeStyles-submit-"]:hover {
+  background-color: #252525;
+}
+
+@media only screen and (max-width: 1000px) {
+  div[class^="makeStyles-root-"] {
+    width: 40vw !important;
+  }
+}
+
+@media only screen and (max-width: 770px) {
+  div[class^="makeStyles-root-"] {
+    width: 60vw !important;
+  }
+}
+
+@media only screen and (max-width: 450px) {
+  div[class^="makeStyles-root-"] {
+    width: 80vw !important;
+  }
+}
+
+/* Dashboard */
+
+p.dashboardHeaderName {
+  color: #fafbfc;
+  margin: 0;
+}
+
+span.material-icons.MuiIcon-root.dashboardHeaderIcon {
+  color: #fafbfc;
+}
+
+p.dashboardUsername {
+  color: #f50057;
+  font-size: 0.6em;
+  margin: 0;
+}
+
+main.dashboardMainContent {
+  position: absolute;
+  top: -25px;
+  height: 85vh;
+  left: 300px;
+}
+
+div.MuiToolbar-root.MuiToolbar-regular.MuiToolbar-gutters {
+  display: flex;
+  justify-content: space-between;
+}
+
+@media only screen and (max-width: 600px) {
+  main.dashboardMainContent {
+    top: -35px;
+    left: 0;
+  }
+}
+
+/* Channel */
+
+.channelOuterContainer {
+  display: flex;
+  justify-content: space-between;
+  width: 78vw;
+  height: 103%;
+}
+
+.channelInnerContainer {
+  margin-top: 3vh;
+  position: relative;
+  width: 73%;
+  height: 104%;
+  background-color: #313336;
+
+}
+
+.channelEmojiPicker {
+  position: absolute;
+  right: 10px;
+  z-index: 2;
+  bottom: 10vh;
+  background-color: white;
+}
+
+.channelSendMessage {
+  display: flex;
+  width: 100%;
+  padding-left: 5px;
+  padding-right: 5px;
+  color: #bfbfbf;
+}
+
+.channelInputForm {
+  width: 100%;
+  z-index: 3;
+  position: absolute;
+  bottom: 0;
+  margin: 0 0 15px 0px;
+  display: flex;
+  justify-content: space-between;  
+}
+.channelInputForm .channelInputTextField input {
+  color: #f5f5f5; /* Light text color */
+}
+.channelInputForm .channelInputTextField .MuiOutlinedInput-notchedOutline {
+  border-color: transparent; /* Remove default outline */
+}
+
+.channelInputForm .channelInputTextField:hover .MuiOutlinedInput-notchedOutline {
+  border-color: transparent; /* Remove hover outline */
+}
+
+.channelInputForm .channelInputTextField:focus-within .MuiOutlinedInput-notchedOutline {
+  border-color: transparent; /* Remove focus outline */
+}
+
+.channelInputForm .channelInputTextField input:focus {
+  outline: none; /* Remove additional outline */
+}
+.channelInputForm .channelInputTextField {
+  width: 98.5%;
+  color: #bfbfbf; /* gray-400 */
+  background-color: #212121;
+  box-shadow: inset -3px -3px 7px rgba(252, 239, 239, 0.1), inset 3px 3px 5px rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+}
+.channelRightContent {
+  margin-top: 3vh;
+  width: 27%;
+  height: 104%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #212121;
+}
+
+@media only screen and (max-width: 600px) {
+  .channelRightContent {
+    display: none;
+  }
+  .channelOuterContainer {
+    width: 98.7vw;
+    height: 105%;
+    align-self: center;
+  }
+  .channelInnerContainer {
+    width: 100%;
+  }
+}
+
+/* Messages */
+
+.messages {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 88%;
+  z-index: 1;
+}
+
+.sentText {
+  display: flex;
+  align-items: center;
+  font-family: Helvetica;
+  color: #828282;
+  letter-spacing: 0.3px;
+}
+
+.messageBox {
+  background: #f3f3f3;
+  border-radius: 20px;
+  padding: 0px 20px;
+  color: white;
+  display: inline-block;
+  max-width: 80%;
+  display: flex;
+  margin-top: 10px;
+  align-items: center;
+}
+
+.messageText {
+  width: 100%;
+  letter-spacing: 0;
+  float: left;
+  margin: 0;
+  font-size: 1.1em;
+  word-wrap: break-word;
+}
+
+.pl-10 {
+  padding-left: 10px;
+}
+
+.pr-10 {
+  padding-right: 10px;
+}
+
+.backgroundWhite {
+  background: rgb(250, 250, 250);
+}
+.messageText img {
+  vertical-align: middle;
+}
+
+.messageContainer {
+  display: flex;
+  justify-content: flex-end;
+  padding: 0 5%;
+  margin-top: 6px;
+}
+
+.backgroundGreen {
+  background: rgba(91, 225, 44, 0.5);
+}
+
+.backgroundYellow {
+  background: rgba(245, 205, 25, 0.5);
+}
+
+.backgroundRed {
+  background: rgba(234, 66, 40, 0.5);
+}
+
+.justifyStart {
+  justify-content: flex-start;
+}
+
+.justifyCenter {
+  justify-content: center;
+}
+
+.justifyEnd {
+  justify-content: flex-end;
+}
+
+.colorAdmin {
+  color: #f50057;
+  font-size: 0.9em;
+}
+
+.colorUser {
+  color: #353535;
+}
+
+/* ChannelsList */
+
+h1.channelsListHeading {
+  color: #e6e6ff;
+  display: flex;
+  justify-content: center;
+  padding-top: 15px;
+  padding-bottom: 0;
+  font-size: 1.5em;
+  margin-bottom: 10px;
+  width: 100%;
+}
+
+div.channelsListOuterContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 83.5vh;
+  border-radius: 10px;
+  height: 89vh;
+  background-color: #212121;
+}
+
+div.MuiButtonBase-root.MuiListItem-root.channel.MuiListItem-gutters.MuiListItem-button
+  div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 30Px;
+  width: 60%;
+  position: relative;
+  color: #fafbfc;
+  text-decoration: none;
+  border-radius: 20px;
+  background-color: #1a1a1d;
+}
+/* Welcome */
+
+.welcomeOuterContainer {
+  position: absolute;
+  top: 0;
+  width: 78vw;
+  height: 91vh;
+  margin-top: 13vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #2f2f2f;
+}
+
+.welcomeOuterContainer h1 {
+  margin: 0;
+}
+
+.intro {
+  width: 40%;
+  text-align: center;
+}
+
+.summary {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+p.summaryHeading {
+  font-size: 2em;
+  margin: 10px;
+}
+
+p.summaryTotalMessages {
+  font-size: 1.3em;
+  font-weight: 800;
+  color: rgba(2, 187, 11, 0.973);
+}
+
+div.summarySentimentsSection {
+  display: flex;
+  width: 80%;
+  justify-content: space-between;
+  margin-bottom: 1rem;
+}
+
+div.summarySentiment {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+div.summarySentiment .sentimentIcon {
+  font-size: 3em;
+  color: #9b9b9b;
+}
+
+div.summarySentiment .sentimentDesc {
+  font-size: 0.8em;
+  color: #676767;
+  line-height: 2em;
+}
+
+div.summarySentiment .sentimentPerc {
+  font-size: 1.5em;
+  color: #1a1a1d;
+  font-weight: 900;
+}
+
+span.summaryOverallSentiment {
+  color: #e65e5eee;
+  font-weight: 900;
+  font-size: 1.2em;
+}
+
+@media only screen and (max-width: 600px) {
+  .welcomeOuterContainer {
+    width: 100vw;
+    height: 91vh;
+  }
+
+  .intro {
+    width: 80%;
+    text-align: center;
+  }
+
+  p.summaryHeading {
+    font-size: 1.8em;
+    /* color: #2196f3; */
+  }
+}
+
+/* NewChannel */
+
+div.newChannelForm {
+  text-align: center;
+  font-size: 1.1em;
+}
+
+h1.newChannelHeading {
+  color: rgba(255, 255, 255, 0.568);
+  font-size: 1em;
+  font-weight: 500;
+  padding: 0px;
+  margin-bottom: 5px;
+}
+
+.newChannelTextField {
+  width: 90%;
+}
+
+.newChannelTextField
+  .MuiInputBase-root.MuiOutlinedInput-root.MuiInputBase-formControl.MuiInputBase-adornedEnd.MuiOutlinedInput-adornedEnd {
+  background-color: rgba(255, 255, 255, 0.192);
+  width: 100%;
+}
+
+/* UsersList */
+
+.usersListOuterContainer {
+  width: 100%;
+  height: 35%;
+  padding: 5%;
+  display: flex;
+  /* color: #9b9b9b; */
+  flex-direction: column;
+  align-items: center;
+}
+
+.usersListInnerContainer {
+  width: 70%;
+  height: 100%;
+  padding: 6%;
+  overflow-y: scroll;
+  background-color: #424242;
+  border: 1px solid transparent;
+  border-radius: 4px;
+}
+
+.usersListHeading {
+  color: #9b9b9b;
+  font-style: italic;
+  font-size: 0.9em;
+  margin: 4% 0;
+}
+
+span.material-icons.MuiIcon-root.fas.fa-circle {
+  font-size: 0.65em;
+  margin-right: 10px;
+  color: green;
+}
+
+material-icons .usersListOnlineUserInfo {
+  font-size: 0.2;
+}
+
+/* ChannelSemanticAnalysis */
+
+.channelSentimentContainer {
+  margin-top: 5%;
+  height: 60%;
+  width: 90%;
+  display: flex;
+  align-self: center;
+  flex-direction: column;
+  align-items: center;
+  background-color: #1a1a1d;
+}
+
+.channelSentimentHeading {
+  padding: 3%;
+  font-style: italic;
+  font-weight: bold;
+  color: white;
+}
+
+.channelSentimentData {
+  width: 100%;
+  height: 100%;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.channelSentimentTotalMessages {
+  /* color: #2196f3; */
+  font-size: 1.2em;
+}
+
+.channelOverallSentiment div,
+.channelOverallSentiment span {
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+/* 404 */
+
+.notFoundContainer {
+  width: 100vw;
+  height: 100vh;
+  background-color: #1a1a1d;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.notFoundHeading {
+  font-size: 4em;
+  color: #212222;
+  padding: 0;
+  margin: 3px;
+}
