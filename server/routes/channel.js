@@ -11,5 +11,11 @@ router.get(
   catchErrors(channelController.getChannelSentiment)
 );
 router.post("/", auth, catchErrors(channelController.createChannel));
+router.delete("/:id", auth, catchErrors(channelController.deleteChannel));
+router.put(
+  "/:id/sentiment",
+  auth,
+  catchErrors(channelController.updateChannelSentiment)
+);
 
 module.exports = router;

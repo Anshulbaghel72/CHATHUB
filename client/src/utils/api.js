@@ -26,3 +26,17 @@ export const POST = (url, data, header, callback, errorcallback) => {
       if (errorcallback) errorcallback(err);
     });
 };
+
+export const DELETE = (url, data, header, callback, errorcallback) => { 
+  return axios
+    .delete(`${apiBaseURL}/${url}`, {
+      headers: header,
+      data: data,
+    })
+    .then((response) => {
+      if (callback) callback(response);
+    })
+    .catch((err) => {
+      if (errorcallback) errorcallback(err);
+    });
+};

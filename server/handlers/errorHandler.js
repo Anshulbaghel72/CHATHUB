@@ -53,3 +53,6 @@ exports.notFound = (req, res, next) => {
     message: "Route not found",
   });
 };
+
+exports.catchErrors = (fn) => (req, res, next) =>
+  fn(req, res, next).catch(next);
